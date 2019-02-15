@@ -1,3 +1,26 @@
+$(function() {
+	$(document).scroll(function() {
+		var _this = this;
+		if ($("#GoTo").length) {
+			var objOffTop = $("#ApplyFormBox").offset().top;
+			var dcHeight = $(document).height();
+			var _top = $(document).scrollTop();
+			var g = Math.round(dcHeight) - Math.round(objOffTop) - 120;
+			if (g <= Math.round(_top)) {
+				$("#GoTo").hide();
+			} else {
+				$("#GoTo").show();
+			}
+
+		}
+	});
+	$(document).on("click", "#GoTo", function() {
+		var objHeight = $("#ApplyFormBox").offset().top;
+		$('html,body').animate({
+			scrollTop: objHeight
+		}, 800);
+	});
+});
 (function() {
 	// 取参数
 	if (window.location.hash == "#/pages/detail/ef" || window.location.hash == "#/pages/detail/ef?key=2") {
