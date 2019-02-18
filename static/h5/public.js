@@ -141,7 +141,7 @@ module.exports = {
 				result = res
 				if (res.success) {
 					EffectCollect.effectReport({
-						type: 4
+						type: 1
 					}, {
 						successCallBack: function() {
 							console.log('效果上报成功')
