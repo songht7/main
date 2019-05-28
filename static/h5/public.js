@@ -17,17 +17,18 @@ module.exports = {
 			dataType: "json",
 			success: function(res) {
 				result = res
+				fireCustomEvent('meetji_submit')
 				if (res.success) {
-					EffectCollect.effectReport({
-						type: 1
-					}, {
-						successCallBack: function() {
-							console.log('效果上报成功')
-						},
-						failCallBack: function() {
-							console.log('效果上报失败')
-						},
-					})
+					// EffectCollect.effectReport({
+					// 	type: 1
+					// }, {
+					// 	successCallBack: function() {
+					// 		console.log('效果上报成功')
+					// 	},
+					// 	failCallBack: function() {
+					// 		console.log('效果上报失败')
+					// 	},
+					// })
 				}
 			},
 			error: (function(err) {
