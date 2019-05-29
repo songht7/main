@@ -6,6 +6,7 @@ function fireEvent(eventType, eventName) {
 	var pageData = {};
 	if (typeof InmobiPixel != "undefined") {
 		window.inmobiPixel = new InmobiPixel();
+		console.log(inmobiPixel)
 		window.inmobiPixel.init({
 			pingServer: PING_SERVER_URL,
 			propertyId: PROPERTY_ID,
